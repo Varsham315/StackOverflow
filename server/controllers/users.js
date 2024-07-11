@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 import User from '../models/auth.js'
+import usersotp from "../models/authOtp.js"
 import axios from 'axios'
 
  const getAllUsers = async (req, res) => {

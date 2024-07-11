@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# StackOverflow Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a clone of Stack Overflow, developed using the MERN (MongoDB, Express, React, Node) stack. It provides a platform for users to post questions, answer questions, upvote or downvote questions, manage their profiles, and search for specific questions. The application also offers user authentication through email and phone number with OTP and integrates a chat bot powered by Google's Search API. Notably, this project also leverages Redux for state management.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **User Authentication**: Secure registration and login system using email and password or phone number with OTP.
 
-### `npm start`
+2. **Ask and Answer Questions**: Users can create questions and provide answers to other users' inquiries.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Voting System**: Allows users to upvote or downvote questions and answers, facilitating community-driven content ranking.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **User Profiles**: Users can view other users' profiles and update their own profiles with personal information.
 
-### `npm test`
+5. **Robust Search Functionality**: Empowers users to quickly locate specific questions, enhancing the user experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. **Chat Bot Integration**: Leverages Google's Search API to provide intelligent answers to user queries.
 
-### `npm run build`
+7. **Redux for State Management**: Utilizes Redux for efficient state management in the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technology Stack
+- **Frontend**: React, Redux
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **External API**: Google Search API, fast2sms API (for OTP authentication)
+  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
+To set up and run the project, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository**:
+   
+     ```bash
+     git clone https://github.com/AnirudhKaranth/stack-overflow-clone.git
+     ```
+2. **Installation**: Navigate to the project directory and install dependencies for both the client and server:
 
-### `npm run eject`
+     ```bash
+     cd stackoverflow-clone/client
+     npm install
+     cd ../server
+     npm install
+     ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Configuration**:
+     Configure your database connection and API keys in .env file as given in .env.example file.
+     Add your geolocation api key of abstractapi.com at **line 30** in /client/src/pages/UserProfile/UserProfile.jsx
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. **Running the Application**: Start the development server for both the client and server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+     ```bash
+     cd stackoverflow-clone/server
+     npm start
+     cd ../client
+     npm start
+     ```
+   
